@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import yfinance as yf
 
 # --- Parameters ---
 S_max = 150
@@ -38,7 +39,7 @@ solution[-1] = V
 def solve_tridiagonal(a, b, c, d):
     nf = len(d)
     ac, bc, cc, dc = map(np.copy, (a, b, c, d))
-
+    
     for i in range(1, nf):
         mc = ac[i-1] / bc[i-1]
         bc[i] -= mc * cc[i-1]
