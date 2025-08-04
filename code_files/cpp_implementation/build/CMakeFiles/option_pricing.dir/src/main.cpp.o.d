@@ -1,6 +1,7 @@
 CMakeFiles/option_pricing.dir/src/main.cpp.o: \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/src/main.cpp \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/analytic.hpp \
+  /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/config.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config_site \

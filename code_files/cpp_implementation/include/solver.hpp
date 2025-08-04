@@ -8,6 +8,12 @@ public:
     CrankNicolsonSolver(const OptionParams& p);
     void run();
     void writeCSV(const std::string& filename);
+
+    std::vector<std::vector<double>> computeDelta() const;
+    std::vector<std::vector<double>> computeGamma() const;
+    void writeDeltaCSV(const std::string& filename);
+    void writeGammaCSV(const std::string& filename);
+    
 private:
     OptionParams p;
     std::vector<std::vector<double>> grid;

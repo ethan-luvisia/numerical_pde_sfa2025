@@ -1,14 +1,11 @@
-#ifndef ANALYTIC_HPP
-#define ANALYTIC_HPP
-
+#pragma once
+#include "config.hpp" // This has OptionsParams struct definition
 #include <vector>
 
-struct OptionParams {
-    double Smax, K, r, sigma, T;
-    int Nx, Nt;
-};
+double blackScholesFormula(double S, double K, double r, double sigma, double T);
+double blackScholesDelta(double S, double K, double r, double sigma, double T);
+double blackScholesGamma(double S, double K, double r, double sigma, double T);
 
 std::vector<std::vector<double>> computeAnalyticGrid(const OptionParams& params);
-void writeAnalyticCSV(const std::string& filename, const OptionParams& params);
-
-#endif
+std::vector<std::vector<double>> computeAnalyticDelta(const OptionParams& params);
+std::vector<std::vector<double>> computeAnalyticGamma(const OptionParams& params);

@@ -88,3 +88,54 @@ void CrankNicolsonSolver::thomasSolve(std::vector<double>& a, std::vector<double
 void CrankNicolsonSolver::writeCSV(const std::string& filename) {
     ::writeCSV(filename, grid);  // uses utils.cpp CSV writer
 }
+
+// NEW METHODS FOR GREEKS COMPUTATION
+
+std::vector<std::vector<double>> CrankNicolsonSolver::computeDelta() const {
+    std::vector<std::vector<double>> delta(p.Nt + 1, std::vector<double>(p.Nx + 1, 0.0));
+    double dS = p.Smax / p.Nx;
+    
+    for (int n = 0; n <= p.Nt; ++n) {
+        // Forward difference at S=0
+        delta[n][0] = (grid[n][1] - grid[n][0]) / dS;
+        
+        // Central difference for interior points
+        for (int i = 1; i < p.Nx; ++i) {
+            delta[n][i] = (grid[n][i + 1] - grid[n][i - 1]) / (2.0 * dS);
+        }
+        
+        // Backward difference at S=Smax
+        delta[n][p.Nx] = (grid[n][p.Nx] - grid[n][p.Nx - 1]) / dS;
+    }
+    
+    return delta;
+}
+
+std::vector<std::vector<double>> CrankNicolsonSolver::computeGamma() const {
+    std::vector<std::vector<double>> gamma(p.Nt + 1, std::vector<double>(p.Nx + 1, 0.0));
+    double dS = p.Smax / p.Nx;
+    double dS2 = dS * dS;
+    
+    for (int n = 0; n <= p.Nt; ++n) {
+        // Set boundary values to 0 (typical for call options)
+        gamma[n][0] = 0.0;
+        gamma[n][p.Nx] = 0.0;
+        
+        // Central difference for interior points
+        for (int i = 1; i < p.Nx; ++i) {
+            gamma[n][i] = (grid[n][i + 1] - 2.0 * grid[n][i] + grid[n][i - 1]) / dS2;
+        }
+    }
+    
+    return gamma;
+}
+
+void CrankNicolsonSolver::writeDeltaCSV(const std::string& filename) {
+    auto delta = computeDelta();
+    ::writeCSV(filename, delta);
+}
+
+void CrankNicolsonSolver::writeGammaCSV(const std::string& filename) {
+    auto gamma = computeGamma();
+    ::writeCSV(filename, gamma);
+}
