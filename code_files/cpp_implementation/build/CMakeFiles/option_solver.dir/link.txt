@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -Wall -Wextra -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/option_solver.dir/src/analytic.cpp.o CMakeFiles/option_solver.dir/src/chebyshev.cpp.o CMakeFiles/option_solver.dir/src/main.cpp.o CMakeFiles/option_solver.dir/src/solver.cpp.o CMakeFiles/option_solver.dir/src/utils.cpp.o -o option_solver

@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/option_pricing.dir/all
+all: CMakeFiles/option_solver.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/option_pricing.dir/codegen
+codegen: CMakeFiles/option_solver.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,106 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/option_pricing.dir/clean
+clean: CMakeFiles/option_solver.dir/clean
+clean: CMakeFiles/run.dir/clean
+clean: CMakeFiles/clean-data.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/option_pricing.dir
+# Target rules for target CMakeFiles/option_solver.dir
 
 # All Build rule for target.
-CMakeFiles/option_pricing.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target option_pricing"
-.PHONY : CMakeFiles/option_pricing.dir/all
+CMakeFiles/option_solver.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target option_solver"
+.PHONY : CMakeFiles/option_solver.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/option_pricing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/option_pricing.dir/all
+CMakeFiles/option_solver.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/option_solver.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 0
-.PHONY : CMakeFiles/option_pricing.dir/rule
+.PHONY : CMakeFiles/option_solver.dir/rule
 
 # Convenience name for target.
-option_pricing: CMakeFiles/option_pricing.dir/rule
-.PHONY : option_pricing
+option_solver: CMakeFiles/option_solver.dir/rule
+.PHONY : option_solver
 
 # codegen rule for target.
-CMakeFiles/option_pricing.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target option_pricing"
-.PHONY : CMakeFiles/option_pricing.dir/codegen
+CMakeFiles/option_solver.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target option_solver"
+.PHONY : CMakeFiles/option_solver.dir/codegen
 
 # clean rule for target.
-CMakeFiles/option_pricing.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/clean
-.PHONY : CMakeFiles/option_pricing.dir/clean
+CMakeFiles/option_solver.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/clean
+.PHONY : CMakeFiles/option_solver.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/run.dir
+
+# All Build rule for target.
+CMakeFiles/run.dir/all: CMakeFiles/option_solver.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num= "Built target run"
+.PHONY : CMakeFiles/run.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/run.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/run.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 0
+.PHONY : CMakeFiles/run.dir/rule
+
+# Convenience name for target.
+run: CMakeFiles/run.dir/rule
+.PHONY : run
+
+# codegen rule for target.
+CMakeFiles/run.dir/codegen: CMakeFiles/option_solver.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num= "Finished codegen for target run"
+.PHONY : CMakeFiles/run.dir/codegen
+
+# clean rule for target.
+CMakeFiles/run.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/clean
+.PHONY : CMakeFiles/run.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/clean-data.dir
+
+# All Build rule for target.
+CMakeFiles/clean-data.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-data.dir/build.make CMakeFiles/clean-data.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-data.dir/build.make CMakeFiles/clean-data.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num= "Built target clean-data"
+.PHONY : CMakeFiles/clean-data.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/clean-data.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/clean-data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles 0
+.PHONY : CMakeFiles/clean-data.dir/rule
+
+# Convenience name for target.
+clean-data: CMakeFiles/clean-data.dir/rule
+.PHONY : clean-data
+
+# codegen rule for target.
+CMakeFiles/clean-data.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-data.dir/build.make CMakeFiles/clean-data.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/build/CMakeFiles --progress-num= "Finished codegen for target clean-data"
+.PHONY : CMakeFiles/clean-data.dir/codegen
+
+# clean rule for target.
+CMakeFiles/clean-data.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-data.dir/build.make CMakeFiles/clean-data.dir/clean
+.PHONY : CMakeFiles/clean-data.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

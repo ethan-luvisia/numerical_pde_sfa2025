@@ -1,5 +1,5 @@
 #pragma once
-#include "config.hpp" // This has OptionsParams struct definition
+#include "utils.hpp" // This has OptionsParams struct definition
 #include <vector>
 
 double blackScholesFormula(double S, double K, double r, double sigma, double T);

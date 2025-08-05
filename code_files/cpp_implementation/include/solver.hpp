@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
-#include "analytic.hpp"  // for OptionParams
+#include "utils.hpp"  // for OptionParams
 
 class CrankNicolsonSolver {
 public:

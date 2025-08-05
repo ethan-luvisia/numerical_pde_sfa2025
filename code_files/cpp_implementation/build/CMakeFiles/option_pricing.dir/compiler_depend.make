@@ -400,7 +400,6 @@ CMakeFiles/option_pricing.dir/src/analytic.cpp.o: /Users/ethanmakokha/Desktop/nu
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/analytic.hpp \
-  /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/config.hpp \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/utils.hpp
 
 CMakeFiles/option_pricing.dir/src/main.cpp.o: /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/src/main.cpp \
@@ -856,6 +855,7 @@ CMakeFiles/option_pricing.dir/src/main.cpp.o: /Users/ethanmakokha/Desktop/numeri
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/analytic.hpp \
+  /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/chebyshev.hpp \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/solver.hpp \
   /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/utils.hpp
 
@@ -1732,6 +1732,8 @@ CMakeFiles/option_pricing.dir/src/utils.cpp.o: /Users/ethanmakokha/Desktop/numer
 
 /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/src/solver.cpp:
 
+/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/chebyshev.hpp:
+
 /Library/Developer/CommandLineTools/usr/include/c++/v1/mutex:
 
 /Library/Developer/CommandLineTools/usr/include/c++/v1/locale.h:
@@ -1805,8 +1807,6 @@ CMakeFiles/option_pricing.dir/src/utils.cpp.o: /Users/ethanmakokha/Desktop/numer
 /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/src/main.cpp:
 
 /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/utils.hpp:
-
-/Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/config.hpp:
 
 /Users/ethanmakokha/Desktop/numerical_pde_sfa2025/code_files/cpp_implementation/include/analytic.hpp:
 

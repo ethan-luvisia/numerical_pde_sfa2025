@@ -117,24 +117,50 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named option_pricing
+# Target rules for targets named option_solver
 
 # Build rule for target.
-option_pricing: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 option_pricing
-.PHONY : option_pricing
+option_solver: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 option_solver
+.PHONY : option_solver
 
 # fast build rule for target.
-option_pricing/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/build
-.PHONY : option_pricing/fast
+option_solver/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/build
+.PHONY : option_solver/fast
+
+#=============================================================================
+# Target rules for targets named run
+
+# Build rule for target.
+run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
+.PHONY : run
+
+# fast build rule for target.
+run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
+
+#=============================================================================
+# Target rules for targets named clean-data
+
+# Build rule for target.
+clean-data: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean-data
+.PHONY : clean-data
+
+# fast build rule for target.
+clean-data/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-data.dir/build.make CMakeFiles/clean-data.dir/build
+.PHONY : clean-data/fast
 
 src/analytic.o: src/analytic.cpp.o
 .PHONY : src/analytic.o
 
 # target to build an object file
 src/analytic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/analytic.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/analytic.cpp.o
 .PHONY : src/analytic.cpp.o
 
 src/analytic.i: src/analytic.cpp.i
@@ -142,7 +168,7 @@ src/analytic.i: src/analytic.cpp.i
 
 # target to preprocess a source file
 src/analytic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/analytic.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/analytic.cpp.i
 .PHONY : src/analytic.cpp.i
 
 src/analytic.s: src/analytic.cpp.s
@@ -150,15 +176,39 @@ src/analytic.s: src/analytic.cpp.s
 
 # target to generate assembly for a file
 src/analytic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/analytic.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/analytic.cpp.s
 .PHONY : src/analytic.cpp.s
+
+src/chebyshev.o: src/chebyshev.cpp.o
+.PHONY : src/chebyshev.o
+
+# target to build an object file
+src/chebyshev.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/chebyshev.cpp.o
+.PHONY : src/chebyshev.cpp.o
+
+src/chebyshev.i: src/chebyshev.cpp.i
+.PHONY : src/chebyshev.i
+
+# target to preprocess a source file
+src/chebyshev.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/chebyshev.cpp.i
+.PHONY : src/chebyshev.cpp.i
+
+src/chebyshev.s: src/chebyshev.cpp.s
+.PHONY : src/chebyshev.s
+
+# target to generate assembly for a file
+src/chebyshev.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/chebyshev.cpp.s
+.PHONY : src/chebyshev.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -166,7 +216,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +224,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/solver.o: src/solver.cpp.o
@@ -182,7 +232,7 @@ src/solver.o: src/solver.cpp.o
 
 # target to build an object file
 src/solver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/solver.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/solver.cpp.o
 .PHONY : src/solver.cpp.o
 
 src/solver.i: src/solver.cpp.i
@@ -190,7 +240,7 @@ src/solver.i: src/solver.cpp.i
 
 # target to preprocess a source file
 src/solver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/solver.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/solver.cpp.i
 .PHONY : src/solver.cpp.i
 
 src/solver.s: src/solver.cpp.s
@@ -198,7 +248,7 @@ src/solver.s: src/solver.cpp.s
 
 # target to generate assembly for a file
 src/solver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/solver.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/solver.cpp.s
 .PHONY : src/solver.cpp.s
 
 src/utils.o: src/utils.cpp.o
@@ -206,7 +256,7 @@ src/utils.o: src/utils.cpp.o
 
 # target to build an object file
 src/utils.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/utils.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/utils.cpp.o
 .PHONY : src/utils.cpp.o
 
 src/utils.i: src/utils.cpp.i
@@ -214,7 +264,7 @@ src/utils.i: src/utils.cpp.i
 
 # target to preprocess a source file
 src/utils.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/utils.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/utils.cpp.i
 .PHONY : src/utils.cpp.i
 
 src/utils.s: src/utils.cpp.s
@@ -222,7 +272,7 @@ src/utils.s: src/utils.cpp.s
 
 # target to generate assembly for a file
 src/utils.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_pricing.dir/build.make CMakeFiles/option_pricing.dir/src/utils.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/option_solver.dir/build.make CMakeFiles/option_solver.dir/src/utils.cpp.s
 .PHONY : src/utils.cpp.s
 
 # Help Target
@@ -233,10 +283,15 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... option_pricing"
+	@echo "... clean-data"
+	@echo "... run"
+	@echo "... option_solver"
 	@echo "... src/analytic.o"
 	@echo "... src/analytic.i"
 	@echo "... src/analytic.s"
+	@echo "... src/chebyshev.o"
+	@echo "... src/chebyshev.i"
+	@echo "... src/chebyshev.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
